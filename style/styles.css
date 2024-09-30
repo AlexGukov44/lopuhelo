@@ -11,7 +11,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+.box {
+    display: block;
+}
 h2 {
     color: #68c6fb;
     font-size: 9vw;
@@ -38,5 +40,28 @@ h2::before {
 
     70%,90% {
         width: 100%;
+    }
+}
+
+.wave {
+    -webkit-box-reflect: below 0 linear-gradient(transparent, rgb(114, 18, 216));
+    color: rgb(129, 18, 226);
+    top: 40px;
+}
+.wave span {
+    display: inline-block;
+    font-size: 5vw;
+    animation: wave 2s infinite calc(.1s * var(--i));
+}
+
+.span {
+    color: aliceblue;
+}
+@keyframes wave {
+    0%, 40%,100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-20px);
     }
 }
